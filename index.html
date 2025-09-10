@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>⚡ Typing Challenge</h1>
+    <p class="subtitle">Type as fast as you can in 60 seconds and learn HTML, CSS, JavaScript!</p>
+
+    <div id="countdown" class="countdown hidden">3</div>
+
+    <!-- Sentence Area -->
+    <div id="quote" class="quote"></div>
+    <textarea id="input" placeholder="Start typing..." disabled></textarea>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div>⏱ Time: <span id="timer">60</span>s</div>
+      <div>💯 Score: <span id="score">0</span></div>
+      <div>⚡ WPM: <span id="wpm">0</span></div>
+      <div>🎯 Accuracy: <span id="accuracy">100%</span></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="startBtn">Start Game</button>
+      <button id="restartBtn" disabled>Restart</button>
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameOver" class="game-over hidden">
+    <h2>🏆 Game Over!</h2>
+    <p>Final Score: <span id="finalScore">0</span></p>
+    <p>WPM: <span id="finalWpm">0</span></p>
+    <p>Accuracy: <span id="finalAccuracy">100%</span></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
